@@ -4,7 +4,8 @@
 
 @layer base {
     body {
-        @apply bg-gray-950 text-gray-100 overflow-x-hidden relative;
+        @apply bg-gray-950 text-gray-100 overflow-x-hidden relative font-sans;
+        scroll-behavior: smooth;
     }
 
     body::before {
@@ -40,6 +41,20 @@
         background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
             linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
         background-size: 40px 40px;
+    }
+
+    .luminous-text {
+        text-shadow: 0 0 10px rgba(59, 130, 246, 0.4), 0 0 20px rgba(59, 130, 246, 0.2);
+    }
+
+    .text-glow {
+        @apply transition-all duration-300;
+        text-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+    }
+
+    .magnetic-wrap {
+        display: inline-block;
+        transition: transform 0.2s cubic-bezier(0.23, 1, 0.32, 1);
     }
 }
 
@@ -100,6 +115,20 @@
 
 .animate-blob {
     animation: blob 10s infinite alternate cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-33.33%);
+    }
+}
+
+.animate-scroll {
+    animation: scroll 30s linear infinite;
 }
 
 @keyframes flow {
