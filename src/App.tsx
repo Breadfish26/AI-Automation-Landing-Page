@@ -148,8 +148,12 @@ function App() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl lg:text-5xl font-bold mb-12 text-center reveal-on-scroll">What You'll Receive</h2>
 
-            <div className="reveal-on-scroll glass-card rounded-3xl p-10 lg:p-12 shadow-2xl">
-              <div className="space-y-12">
+            <div className="reveal-on-scroll glass-card rounded-3xl p-10 lg:p-12 shadow-2xl relative">
+              {/* Connecting Line */}
+              <div className="absolute left-[3.25rem] lg:left-[3.75rem] top-24 bottom-24 w-px bg-blue-500/10 hidden sm:block overflow-hidden">
+                <div className="w-full h-full animate-flow-line"></div>
+              </div>
+              <div className="space-y-12 relative z-10">
                 {[
                   {
                     num: 1,
@@ -256,7 +260,9 @@ function App() {
 
           <div className="max-w-4xl mx-auto relative">
             {/* Vertical Connecting Line */}
-            <div className="absolute left-6 top-8 bottom-8 w-px bg-gradient-to-b from-blue-500/50 via-blue-500/20 to-transparent hidden md:block"></div>
+            <div className="absolute left-6 top-8 bottom-8 w-px bg-blue-500/10 hidden md:block overflow-hidden">
+              <div className="w-full h-full animate-flow-line"></div>
+            </div>
 
             <div className="space-y-12">
               {[

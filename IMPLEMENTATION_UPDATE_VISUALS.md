@@ -13,7 +13,7 @@ This plan outlines the enhancements made to the landing page to create a modern,
 - [x] **Hero Section**: Enhanced with a huge gradient text, mesh backgrounds, and scale animations on the primary CTA.
 - [x] **Audit Benefits Cards**: Implemented hover-states with glowing borders and a -2rem vertical lift.
 - [x] **Grid Patterns**: Integrated a subtle technical grid overlay in the "What You'll Receive" section.
-- [x] **Flowing Process Lines**: Added a vertical connecting line between process steps to guide the user's eye.
+- [x] **Flowing Process Lines**: Added vertical connecting lines with a flowing light animation (`animate-flow-line`) to both the "What You'll Receive" and "What Happens Next" sections.
 - [x] **Final CTA**: Styled with deep radial glows and a frosted glass container for maximum impact.
 
 ## 3. Interactive Micro-animations
@@ -37,4 +37,4 @@ This plan outlines the enhancements made to the landing page to create a modern,
 ---
 
 ## Status: COMPLETE
-The visual overhaul has been successfully implemented across the entire application.
+The visual overhaul has been successfully implemented and refined with animated flowing lines for improved visual storytelling.
