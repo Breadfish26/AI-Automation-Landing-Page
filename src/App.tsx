@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { ArrowRight, CheckCircle2, Target, Users, Zap, Star, Shield, TrendingUp, Cpu } from 'lucide-react';
+import { createChat } from '@n8n/chat';
+import '@n8n/chat/style.css';
 
 function useScrollReveal() {
   useEffect(() => {
@@ -279,6 +281,7 @@ function TestimonialCarousel() {
   );
 }
 
+
 function App() {
   useScrollReveal();
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -292,6 +295,15 @@ function App() {
     };
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
+  useEffect(() => {
+    createChat({
+      webhookUrl: 'http://n8n-eccsgw8s40o0cgoosg84g888.34.59.132.81.sslip.io/webhook/e91436a2-3553-41ee-9a63-1b12c90cd788/chat',
+      mode: 'window',
+      showWelcomeScreen: false,
+      initialMessages: ["Hi there! 👋", "How can I help you today?"],
+    });
   }, []);
 
   const scrollToCTA = () => {
@@ -680,6 +692,7 @@ function App() {
       </section>
 
       <TestimonialCarousel />
+
 
       {/* Final CTA Section */}
       <section id="audit-form" className="py-32 relative overflow-hidden">
